@@ -48,10 +48,10 @@ const escapeHtml=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>'
 const subjects=['クレーン知識','電気','関係法令','力学'];
 function shuffled(arr){let a=[...arr];for(let i=a.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 function allIndexed(){return questions.map((q,i)=>({...q,i}))}
-function startSubject(sub){
+function startSubject(sub,shouldScroll=true){
  activeSubject=sub;session={kind:'subject',list:allIndexed().filter(q=>q.subject===sub),pos:0,answers:answers,finished:false};
  document.querySelectorAll('.subject').forEach(b=>b.classList.toggle('active',b.dataset.subject===sub));
- renderSession();jumpToQuestions();
+ renderSession();if(shouldScroll)jumpToQuestions();
 }
 function beginSession(kind){
  const all=allIndexed();
@@ -87,5 +87,6 @@ function render(){if(session){renderSession()}else{startSubject(activeSubject)}}
 document.querySelectorAll('[data-subject]').forEach(b=>{b.querySelector('small').textContent=`${questions.filter(q=>q.subject===b.dataset.subject).length}問`;b.onclick=()=>startSubject(b.dataset.subject)});
 $('mock40').onclick=()=>beginSession('mock');
 $('reset').onclick=()=>{if(session.kind==='mock'){beginSession('mock')}else{session.list.forEach(q=>delete answers[q.i]);startSubject(activeSubject)}};
-startSubject(activeSubject);
+startSubject(activeSubject,false);
+window.addEventListener('pageshow',()=>{if(!location.hash)window.scrollTo({top:0,left:0,behavior:'instant'})});
 </script></body></html>
