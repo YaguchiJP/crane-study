@@ -27,12 +27,21 @@ header p{margin-top:4px}
 .episode-body p{margin-top:12px;color:#465c6c;font-size:13px}
 .episode-body>a{display:inline-block;margin-top:12px}
 video{display:block;width:100%;max-width:360px;aspect-ratio:4/5;margin:0 auto;border-radius:12px;background:#fff}
+.lecture-header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.lecture-mascot{flex:none;width:76px;height:76px;border:2px solid #fff;border-radius:50%;background:#ffd64a url("hbj-hero-large-text.png") -42px -111px / 369px auto no-repeat;box-shadow:0 0 0 1px #e4b643}
+@media(max-width:480px){
+  .lecture-header{gap:12px;padding:16px}
+  .lecture-mascot{width:52px;height:52px;background-size:248px auto;background-position:-28px -74px}
+}
 </style>
 </head>
 <body>
 <main>
 <a href="index.html">← トップページに戻る</a>
-<header><h1>移動式クレーンに関する知識</h1><p>ショート動画講座</p></header>
+<header class="lecture-header">
+<div><h1>移動式クレーンに関する知識</h1><p>ショート動画講座</p></div>
+<span class="lecture-mascot" role="img" aria-label="クレーンくん"></span>
+</header>
 <details class="episode" name="crane-lessons" id="episode-01">
 <summary><span class="episode-play" aria-hidden="true">▶</span><span class="episode-title">第1話　ジブを起こすと、作業半径はどう変わる？</span><span class="episode-chevron" aria-hidden="true"></span></summary>
 <div class="episode-body">
