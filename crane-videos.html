@@ -10,49 +10,92 @@ body{margin:0;background:#f7f9fb;color:#233649;font:16px/1.65 system-ui,sans-ser
 main{max-width:760px;margin:auto;padding:24px 16px 48px}
 a{color:#205b75;text-underline-offset:3px}
 header{margin-top:20px;padding:20px;border:1px solid #bdd2de;border-radius:18px;background:#eef6f9}
-h1,h2,p{margin:0}
+h1,p{margin:0}
 h1{font-size:clamp(22px,5vw,30px);line-height:1.4}
-h2{font-size:clamp(18px,4vw,23px);line-height:1.5}
 header p{margin-top:4px}
-article{margin-top:16px;padding:20px;border:1px solid #dce5eb;border-radius:16px;background:#fff}
-article p{margin-top:8px;color:#465c6c}
-article a{display:inline-block;margin-top:12px}
-video{display:block;width:100%;max-width:360px;aspect-ratio:4/5;margin:16px auto 0;border-radius:12px;background:#fff}
+.episode{margin-top:12px;border:1px solid #b8d9bc;border-radius:16px;background:#fff}
+.episode summary{display:grid;grid-template-columns:28px minmax(0,1fr) 14px;align-items:center;gap:12px;min-height:64px;padding:12px 16px;border-radius:15px;background:#eef9ed;color:#1e4528;cursor:pointer;list-style:none}
+.episode summary::-webkit-details-marker{display:none}
+.episode summary:hover{background:#e0f3df}
+.episode summary:focus-visible{outline:3px solid #267438;outline-offset:2px}
+.episode[open] summary{border-radius:15px 15px 0 0;border-bottom:1px solid #b8d9bc}
+.episode-title{font-size:clamp(16px,4.2vw,19px);font-weight:750;line-height:1.5}
+.episode-play{font-size:13px;color:#fff;background:#25743a;border-radius:8px;text-align:center;line-height:28px}
+.episode-chevron{width:9px;height:9px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);justify-self:center}
+.episode[open] .episode-chevron{transform:rotate(225deg)}
+.episode-body{padding:12px 16px 16px}
+.episode-body p{margin-top:12px;color:#465c6c;font-size:13px}
+.episode-body>a{display:inline-block;margin-top:12px}
+video{display:block;width:100%;max-width:360px;aspect-ratio:4/5;margin:0 auto;border-radius:12px;background:#fff}
 </style>
 </head>
 <body>
 <main>
 <a href="index.html">← トップページに戻る</a>
 <header><h1>移動式クレーンに関する知識</h1><p>ショート動画講座</p></header>
-<article id="episode-01">
-<h2>第1話　ジブを起こすと、作業半径はどう変わる？</h2>
-<video controls playsinline preload="metadata" src="crane-01.mp4" aria-label="第1話 ジブを起こすと、作業半径はどう変わる？">
+<details class="episode" name="crane-lessons" id="episode-01">
+<summary><span class="episode-play" aria-hidden="true">▶</span><span class="episode-title">第1話　ジブを起こすと、作業半径はどう変わる？</span><span class="episode-chevron" aria-hidden="true"></span></summary>
+<div class="episode-body">
+<video controls playsinline preload="none" src="crane-01.mp4" aria-label="第1話 ジブを起こすと、作業半径はどう変わる？">
 <a href="crane-01.mp4">第1話の動画を開く</a>
 </video>
 <p>写真：Cjp24 / Wikimedia Commons（<a href="https://commons.wikimedia.org/wiki/File:Liebherr_LTM_1055-3.2_(5).jpg">写真1</a>・<a href="https://commons.wikimedia.org/wiki/File:Liebherr_LTM_1055-3.2_(2).jpg">写真2</a>、<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>、サイズ調整・図解を追加）</p>
 <a href="practice-202.html?subject=crane">クレーン知識の科目別演習へ →</a>
-</article>
-<article id="episode-02">
-<h2>第2話　クレーンは何トンまでつれる？</h2>
-<video controls playsinline preload="metadata" src="crane-02.mp4" aria-label="第2話 クレーンは何トンまでつれる？">
+</div>
+</details>
+<details class="episode" name="crane-lessons" id="episode-02">
+<summary><span class="episode-play" aria-hidden="true">▶</span><span class="episode-title">第2話　クレーンは何トンまでつれる？</span><span class="episode-chevron" aria-hidden="true"></span></summary>
+<div class="episode-body">
+<video controls playsinline preload="none" src="crane-02.mp4" aria-label="第2話 クレーンは何トンまでつれる？">
 <a href="crane-02.mp4">第2話の動画を開く</a>
 </video>
 <p>写真：Cjp24 / Wikimedia Commons（<a href="https://commons.wikimedia.org/wiki/File:Liebherr_LTM_1055-3.2_(5).jpg">元の写真</a>、<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>、トリミング・注釈を追加）</p>
-</article>
-<article id="episode-03">
-<h2>第3話　定格総荷重表はどう読む？</h2>
-<video controls playsinline preload="metadata" src="crane-03.mp4" aria-label="第3話 定格総荷重表はどう読む？">
+</div>
+</details>
+<details class="episode" name="crane-lessons" id="episode-03">
+<summary><span class="episode-play" aria-hidden="true">▶</span><span class="episode-title">第3話　定格総荷重表はどう読む？</span><span class="episode-chevron" aria-hidden="true"></span></summary>
+<div class="episode-body">
+<video controls playsinline preload="none" src="crane-03.mp4" aria-label="第3話 定格総荷重表はどう読む？">
 <a href="crane-03.mp4">第3話の動画を開く</a>
 </video>
 <p>写真：Cjp24 / Wikimedia Commons（<a href="https://commons.wikimedia.org/wiki/File:Liebherr_LTM_1055-3.2_(5).jpg">元の写真</a>、<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>、トリミング・注釈を追加）</p>
-</article>
-<article id="episode-04">
-<h2>第4話　クレーンはどう動く？ 5つの動きを見分けよう</h2>
-<video controls playsinline preload="metadata" src="crane-04.mp4" aria-label="第4話 クレーンはどう動く？ 5つの動きを見分けよう">
+</div>
+</details>
+<details class="episode" name="crane-lessons" id="episode-04">
+<summary><span class="episode-play" aria-hidden="true">▶</span><span class="episode-title">第4話　クレーンはどう動く？ 5つの動きを見分けよう</span><span class="episode-chevron" aria-hidden="true"></span></summary>
+<div class="episode-body">
+<video controls playsinline preload="none" src="crane-04.mp4" aria-label="第4話 クレーンはどう動く？ 5つの動きを見分けよう">
 <a href="crane-04.mp4">第4話の動画を開く</a>
 </video>
 <p>写真：Wikimedia Commons（<a href="https://commons.wikimedia.org/wiki/File:Liebherr_LTM_1055-3.2_(5).jpg">Cjp24</a>、<a href="https://commons.wikimedia.org/wiki/File:Crane_hook_20231203_142544.jpg">Ka23 13</a>、<a href="https://commons.wikimedia.org/wiki/File:Liebherr_LTM_1200-5.1_Teleskopmobilkran_in_Wuppertal,_Kabelstra%C3%9Fe_(04).jpg">Im Fokus</a>、<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>、トリミング・注釈を追加）</p>
-</article>
+</div>
+</details>
 </main>
+<script>
+const episodes = document.querySelectorAll('details.episode');
+
+for (const episode of episodes) {
+  episode.addEventListener('toggle', () => {
+    if (!episode.open) {
+      episode.querySelector('video')?.pause();
+      return;
+    }
+    for (const other of episodes) {
+      if (other !== episode && other.open) other.open = false;
+    }
+  });
+}
+
+function openLinkedEpisode() {
+  const episode = document.getElementById(location.hash.slice(1));
+  if (episode?.matches('details.episode')) {
+    episode.open = true;
+    requestAnimationFrame(() => episode.scrollIntoView());
+  }
+}
+
+openLinkedEpisode();
+window.addEventListener('hashchange', openLinkedEpisode);
+</script>
 </body>
 </html>
